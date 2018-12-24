@@ -1,0 +1,128 @@
+/* MENU STYLES */
+
+// varialbes, here you can customize the background
+// and text colors
+$sidebar-background: #fff;
+$border-color: #dee2e6;
+$menuitem-color: #20c997;
+
+.menu-header {
+	height: 70px;
+	border-bottom: 1px solid #dee2e6;
+	.h2 {
+		font-size: 1.5rem;
+	}
+	@include media-breakpoint-up("sm") {
+		height: 75px;
+		.h2 {
+			font-size: 2rem;
+		}
+	}
+}
+
+.drawer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	flex: 0 0 auto;
+	background-color: $sidebar-background;
+	width: 240px;
+	height: 100vh;
+	transform: translateX(-105%);
+	-webkit-box-shadow: 6px 0 6px -3px #333;
+	box-shadow: 6px 0 6px -3px #333;
+	z-index: 90;
+	overflow: hidden;
+	
+	.drawer-header {
+		position: relative;
+		z-index: 50;
+		background-color: $sidebar-background;
+		height: 70px;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid $border-color;
+		@include media-breakpoint-up("sm") {
+			height: 75px;
+		}
+	}
+
+	.menu-container {
+		overflow: auto;
+		height: 100vh;
+		margin-top: -70px;
+		padding-top: 86px !important;
+		z-index: 10;
+
+		@include media-breakpoint-up("sm") {
+			margin-top: -75px;
+			padding-top: 91px !important;
+		}
+
+		.menu-item {
+			padding: 0.5rem 1rem;
+			background-color: $sidebar-background;
+			color: darken($menuitem-color, 10%);
+			display: block;
+			font-weight: 500;
+			font-size: 1.125rem;
+			cursor: pointer;
+			text-decoration: none;
+			&:hover {
+				background-color: #e9ecef;
+				color: darken($menuitem-color, 10%);
+			}
+			&:active,
+			&:focus,
+			&.active {
+				background-color: #e9ecef;
+				color: darken($menuitem-color, 20%);
+			}
+		}
+
+		.divider {
+			border-bottom: 1px solid $border-color;
+		}
+	}
+
+}
+
+.menu-button {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	transform: translate(15px, 15px);
+	font-size: 1.15rem;
+	background-color: #e9ecef;
+	padding: 0.25rem 2px;
+	border-color: #ced4da;
+	width: 42px;
+	box-shadow: .15rem .25rem .35rem rgba(#000, .25);
+
+	&:active,
+	&:focus {
+		box-shadow: .15rem .25rem .35rem rgba(#000, .25);
+	}
+	
+	@include media-breakpoint-up("sm") {
+		font-size: 1.75rem;
+		width: 50px;
+	}
+}
+
+// Content Veil
+// visible only when the menu drawer is open
+// blocks interactions with any other element in the app
+// while the drawer is open
+.content-veil {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: #333;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 85;
+}

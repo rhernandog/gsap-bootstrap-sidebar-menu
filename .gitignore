@@ -1,0 +1,8 @@
+node_modules/
+.vscode/
+build/
+src/template/
+src/index.js
+package.json
+package-lock.json
+webpack.config.js
