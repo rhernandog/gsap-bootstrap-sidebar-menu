@@ -1,5 +1,8 @@
 # GreenSock & Bootstrap Sidebar Menu for React
-
+[![Dependency Status](https://img.shields.io/david/rhernandog/gsap-bootstrap-sidebar-menu.svg)](https://david-dm.org/rhernandog/gsap-bootstrap-sidebar-menu)
+[![](https://img.shields.io/github/issues/rhernandog/gsap-bootstrap-sidebar-menu.svg)](https://github.com/rhernandog/gsap-bootstrap-sidebar-menu/issues)
+[![Build Status](https://travis-ci.org/rhernandog/gsap-bootstrap-sidebar-menu.svg?branch=master)](https://travis-ci.org/rhernandog/gsap-bootstrap-sidebar-menu)
+[![Coverage Status](https://coveralls.io/repos/github/rhernandog/gsap-bootstrap-sidebar-menu/badge.svg?branch=master)](https://coveralls.io/github/rhernandog/gsap-bootstrap-sidebar-menu?branch=master)
 ## Description
 A sidebar sliding menu for React, created with Bootstrap and animated with the GreenSock Animation Platform (GSAP).
 
